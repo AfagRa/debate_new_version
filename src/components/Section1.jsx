@@ -1,6 +1,6 @@
 const Section1 = () => {
   return (
-    <div className="bg-[#E4CBA3]">
+    <div className="bg-[#B1B1B3]">
       <div className="py-20 px-6 relative">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>

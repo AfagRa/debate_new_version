@@ -2,7 +2,7 @@ const Hero = () => {
   return (
     <>
       <div className="relative pt-20 min-h-screen bg-center bg-cover flex items-center justify-center overflow-hidden"
-      style={{ backgroundImage: `url(/img/tornpaper.png)` }}>
+      style={{ backgroundImage: `url(/img/bg_hero.png)` }}>
         <div className="absolute p-10"/>
         <div className="relative text-center px-4 max-w-4xl">
           <h1 className="text-5xl md:text-6xl text-[#D2B896] mb-6 leading-tight">
