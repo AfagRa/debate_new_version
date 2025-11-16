@@ -55,13 +55,12 @@ function NewsSection() {
               <div 
                 key={news.id}
                 onClick={() => navigate(`/news/${news.id}`)}
-                className="group flex gap-6 bg-gray-50 overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer relative"
-              >
+                className="group flex flex-col md:flex-row gap-6 bg-gray-50 overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer relative">
                 {/* Hover Background Overlay */}
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
-                
+
                 {/* Image */}
-                <div className="w-64 shrink-0 relative z-10">
+                <div className="w-full md:w-64 h-48 md:h-auto shrink-0 relative z-10">
                   <img 
                     src={news.image} 
                     alt={news.title}
@@ -70,7 +69,7 @@ function NewsSection() {
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col justify-between py-6 pr-6 grow relative z-10">
+                <div className="flex flex-col justify-between py-6 px-6 grow relative z-10">
                   <div>
                     <h3 className="font-body text-[1.5rem] leading-snug font-semibold text-zinc-800 mb-3 group-hover:text-zinc-900 transition-colors">
                       {news.title}
