@@ -37,7 +37,7 @@ function NewsSection() {
       <div className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="mb-12 text-[#b1b1b3]">
+          <div className="mb-12 text-[#b1b1b3]" data-aos="fade-up">
             <h2 className="font-baskerville text-[3.5rem] leading-tight mb-4 italic">
               Latest News
             </h2>
@@ -51,11 +51,14 @@ function NewsSection() {
 
           {/* News Cards */}
           <div className="space-y-6 mb-8">
-            {newsItems.map((news) => (
+            {newsItems.map((news, index) => (
               <div 
                 key={news.id}
                 onClick={() => navigate(`/news/${news.id}`)}
-                className="group flex flex-col md:flex-row gap-6 bg-gray-50 overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer relative">
+                className="group flex flex-col md:flex-row gap-6 bg-gray-50 overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer relative"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
                 {/* Hover Background Overlay */}
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
 
@@ -87,7 +90,7 @@ function NewsSection() {
           </div>
 
           {/* Read More Button */}
-          <div className="flex justify-end">
+          <div className="flex justify-end" data-aos="fade-up" data-aos-delay={newsItems.length * 100}>
             <Link to="/news">
               <button className="font-body bg-[#b1b1b3] text-[#182547] px-8 py-3 tracking-wider uppercase text-sm hover:bg-white cursor-pointer transition border border-zinc-600">
                 Read More...

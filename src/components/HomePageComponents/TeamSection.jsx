@@ -116,7 +116,7 @@ function TeamSection() {
 
           <div className="max-w-6xl mx-auto relative z-20">
             {/* Section Header */}
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic">
                 Our Team
               </h2>
@@ -128,7 +128,7 @@ function TeamSection() {
             {/* Horizontal Scroll Team Members */}
             <SimpleBar autoHide={false} forceVisible="x" className="w-full pt-0 px-0 pb-[1%]">
               <div className="flex gap-8 justify-start w-max pb-10">
-                {teamMembers.map((member) => (
+                {teamMembers.map((member, index) => (
                   <div 
                     key={member.id}
                     className="w-72 group/card cursor-pointer bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1"
@@ -157,7 +157,7 @@ function TeamSection() {
             </SimpleBar>
 
             {/* Join Us Button */}
-            <div className="flex justify-center mt-12">
+            <div className="flex justify-center mt-12" data-aos="fade-up">
               <button 
                 onClick={scrollToContact}
                 className="font-body bg-zinc-800 text-stone-100 px-10 py-4 tracking-wider uppercase text-sm hover:bg-zinc-700 transition border border-zinc-600"
@@ -170,6 +170,7 @@ function TeamSection() {
       </div>
     </div>
   )
+
 }
 
 export default TeamSection

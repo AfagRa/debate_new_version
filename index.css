@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import 'simplebar-react/dist/simplebar.min.css';
+@import 'aos/dist/aos.css';
 
 .font-garamond {
   font-family: "EB Garamond", serif;

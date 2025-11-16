@@ -1,9 +1,8 @@
-import { FaFacebookF, FaInstagram} from 'react-icons/fa';
+import { FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { IoMdMail } from 'react-icons/io';
 
 const Footer = () => {
   return (
-    // Outer container with requested background color
     <footer className="bg-[#182547] text-white pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -11,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-gray-700 pb-10">
 
           {/* 1. Contact Form */}
-          <div className="col-span-1 md:col-span-1">
+          <div data-aos="fade-up">
             <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2">Contact Us</h3>
             <form>
               <input 
@@ -38,8 +37,8 @@ const Footer = () => {
             </form>
           </div>
 
-          {/* 2. Quick Links/Navigation (Placeholder) */}
-          <div>
+          {/* 2. Quick Links */}
+          <div data-aos="fade-up" data-aos-delay="100">
             <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2">Quick Links</h3>
             <ul className="space-y-2">
               <li><a href="#" className="transition-colors border-b-2 border-transparent hover:text-gray-400 hover:border-white pb-1">About</a></li>
@@ -49,27 +48,24 @@ const Footer = () => {
           </div>
           
           {/* 3. Social Links */}
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/people/BHOS-Debate-Club/100074306918748/" aria-label="Facebook" className="text-2xl hover:scale-110 transition">
+              <a href="https://www.facebook.com/people/BHOS-Debate-Club/100074306918748/" aria-label="Facebook" className="text-2xl hover:scale-110 transition" data-aos="fade-up" data-aos-delay="0">
                 <FaFacebookF />
               </a>
-              <a href="https://www.instagram.com/bhos.debate.club" aria-label="Instagram" className="text-2xl hover:scale-110 transition">
+              <a href="https://www.instagram.com/bhos.debate.club" aria-label="Instagram" className="text-2xl hover:scale-110 transition" data-aos="fade-up" data-aos-delay="50">
                 <FaInstagram />
               </a>
-              <a href="mailto:contact@debate.bhos.club" aria-label="mail" className="text-2xl hover:scale-110 transition">
+              <a href="mailto:contact@debate.bhos.club" aria-label="Mail" className="text-2xl hover:scale-110 transition" data-aos="fade-up" data-aos-delay="100">
                 <IoMdMail />
               </a>
             </div>
           </div>
 
           {/* 4. Embedded Map */}
-          <div>
-            <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2">
-              Our Location
-            </h3>
-
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h3 className="text-xl font-bold mb-4 border-b border-gray-600 pb-2">Our Location</h3>
             <div className="aspect-w-16 aspect-h-9 w-full h-40 bg-gray-700 flex items-center justify-center rounded overflow-hidden">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.1081747647668!2d49.824485375952364!3d40.32001506152026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307f003b58ac43%3A0xbafb16ba15086cd2!2sBaku%20Higher%20Oil%20School!5e1!3m2!1sen!2saz!4v1763327612670!5m2!1sen!2saz"
@@ -83,11 +79,10 @@ const Footer = () => {
             </div>
           </div>
 
-
         </div>
 
         {/* Copyright Section */}
-        <div className="mt-8 text-center text-gray-400">
+        <div className="mt-8 text-center text-gray-400" data-aos="fade-up" data-aos-delay="400">
           <p>&copy; {new Date().getFullYear()} BHOS Debate Club. All rights reserved.</p>
         </div>
 

@@ -53,7 +53,7 @@ function BlogSection() {
 
           <div className="max-w-6xl mx-auto relative z-20">
             {/* Section Header */}
-            <div className="mb-12">
+            <div className="mb-12" data-aos="fade-up">
               <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic">
                 Featured Blogs
               </h2>
@@ -67,11 +67,13 @@ function BlogSection() {
 
             {/* Blog Cards Grid */}
             <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {blogPosts.map((blog) => (
+              {blogPosts.map((blog, index) => (
                 <div 
                   key={blog.id}
                   onClick={() => navigate(`/blog/${blog.id}`)}
                   className="group/card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
                 >
                   {/* Image */}
                   <div className="w-full h-48 overflow-hidden">
@@ -99,7 +101,7 @@ function BlogSection() {
             </div>
 
             {/* Read More Button */}
-            <div className="flex justify-end">
+            <div className="flex justify-end" data-aos="fade-up" data-aos-delay={blogPosts.length * 100}>
               <Link to="/blog">
                 <button className="font-body cursor-pointer bg-zinc-800 text-stone-100 px-8 py-3 tracking-wider uppercase text-sm hover:bg-zinc-700 transition border border-zinc-600">
                   Read More Blogs

@@ -31,26 +31,23 @@ function WhatWeDoSection() {
       <div className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
-          <div>
+          <div data-aos="fade-right">
             <div className="mb-12">
-              <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic">
+              <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic" data-aos="fade-up">
                 What We Do
               </h2>
-              <p className="font-garamond text-[1.75rem] leading-snug text-zinc-700 mb-4">
+              <p className="font-garamond text-[1.75rem] leading-snug text-zinc-700 mb-4" data-aos="fade-up" data-aos-delay="100">
                 —building voices, shaping minds.
               </p>
-              <p className="font-body text-[1.125rem] leading-relaxed text-zinc-600">
+              <p className="font-body text-[1.125rem] leading-relaxed text-zinc-600" data-aos="fade-up" data-aos-delay="200">
                 We provide a comprehensive platform for debaters to learn, compete, and grow together through meaningful engagement and intellectual challenge.
               </p>
-              {/* <p className="font-body text-[1.125rem] leading-relaxed text-zinc-600">
-                The Baku Higher Oil School Debate Club is a vibrant community that nurtures intellectual curiosity, critical thinking, and persuasive communication, with a focus on public speaking and effective communication skills. Students from all disciplines are welcome to participate in dynamic, respectful discussions on a variety of topics.
-              </p> */}
             </div>
 
             {/* Activities List */}
             <div className="space-y-6 font-body">
-              {activities.map((activity) => (
-                <div className="flex gap-4" key={activity.title}>
+              {activities.map((activity, index) => (
+                <div className="flex gap-4" key={activity.title} data-aos="fade-up" data-aos-delay={index * 100}>
                   <div className="text-[2rem] leading-none shrink-0">
                     {activity.emoji}
                   </div>
@@ -68,7 +65,7 @@ function WhatWeDoSection() {
           </div>
 
           {/* Right Side - Image */}
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center" data-aos="fade-left">
             <img 
               src="../../img/people_discussing.webp" 
               alt="People discussing" 
