@@ -55,7 +55,7 @@ function NewsSection() {
               <div 
                 key={news.id}
                 onClick={() => navigate(`/news/${news.id}`)}
-                className="group flex flex-col md:flex-row gap-6 bg-gray-50 overflow-hidden shadow-sm hover:shadow-md transition-all cursor-pointer relative">
+                className="group flex flex-col md:flex-row gap-6 bg-gray-50 overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer relative">
                 {/* Hover Background Overlay */}
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
 
