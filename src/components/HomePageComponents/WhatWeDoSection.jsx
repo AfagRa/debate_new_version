@@ -27,7 +27,7 @@ function WhatWeDoSection() {
   ]
 
   return (
-    <div className="bg-[#b1b1b3]">
+    <div className="bg-[#9F9FA1]">
       <div className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Left Side - Text Content */}
