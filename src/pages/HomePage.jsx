@@ -9,7 +9,7 @@ import Team from "../components/HomePageComponents/TeamSection"
 const HomePage = () => {
   return (
     <>
-        <div>
+        <div className="overflow-x-hidden">
             <Navbar />
             <Hero />
             <WhatWeDoSection />

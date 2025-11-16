@@ -63,7 +63,7 @@ function NewsSection() {
                 <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
 
                 {/* Image */}
-                <div className="w-full md:w-64 h-48 md:h-auto shrink-0 relative z-10">
+                <div className="w-full md:w-64 h-48 md:h-auto shrink-0 relative">
                   <img 
                     src={news.image} 
                     alt={news.title}
@@ -72,7 +72,7 @@ function NewsSection() {
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col justify-between py-6 px-6 grow relative z-10">
+                <div className="flex flex-col justify-between py-6 px-6 grow relative">
                   <div>
                     <h3 className="font-body text-[1.5rem] leading-snug font-semibold text-zinc-800 mb-3 group-hover:text-zinc-900 transition-colors">
                       {news.title}

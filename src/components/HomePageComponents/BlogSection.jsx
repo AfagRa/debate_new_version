@@ -35,7 +35,7 @@ function BlogSection() {
   return (
     <div className="bg-white relative overflow-hidden">
       {/* Hover trigger wrapper */}
-      <div className="group relative z-10">
+      <div className="group relative">
         <style>
           {`
             .blog-section:hover .blog-bg {
@@ -51,7 +51,7 @@ function BlogSection() {
             style={{ backgroundImage: "url('../../img/The_School_of_Athens.jpg')" }}
           />
 
-          <div className="max-w-6xl mx-auto relative z-20">
+          <div className="max-w-6xl mx-auto relative">
             {/* Section Header */}
             <div className="mb-12" data-aos="fade-up">
               <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic">

@@ -98,7 +98,7 @@ function TeamSection() {
   return (
     <div className="bg-[#bebeca] relative overflow-hidden">
       {/* Hover trigger wrapper */}
-      <div className="group relative z-10">
+      <div className="group relative">
         <style>
           {`
             .team-section:hover .team-bg {
@@ -114,7 +114,7 @@ function TeamSection() {
             style={{ backgroundImage: "url('../../img/bhos.jpg')" }}
           />
 
-          <div className="max-w-6xl mx-auto relative z-20">
+          <div className="max-w-6xl mx-auto relative">
             {/* Section Header */}
             <div className="text-center mb-12" data-aos="fade-up">
               <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic">

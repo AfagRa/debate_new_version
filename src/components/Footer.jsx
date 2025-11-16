@@ -82,7 +82,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="mt-8 text-center text-gray-400" data-aos="fade-up" data-aos-delay="400">
+        <div className="mt-8 text-center text-gray-400">
           <p>&copy; {new Date().getFullYear()} BHOS Debate Club. All rights reserved.</p>
         </div>
 
