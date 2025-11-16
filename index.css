@@ -1,1 +1,60 @@
 @import "tailwindcss";
+@import 'simplebar-react/dist/simplebar.min.css';
+
+.font-garamond {
+  font-family: "EB Garamond", serif;
+}
+
+.font-baskerville {
+  font-family: "Libre Baskerville", serif;
+}
+
+.font-body {
+  font-family: "Source Serif Pro", serif;
+}
+
+.overflow-x-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.overflow-x-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* SimpleBar horizontal track styling */
+.simplebar-track.simplebar-horizontal {
+    width: 40% !important;
+    left: 50% !important; 
+    transform: translateX(-50%);
+    height: 10px !important;
+    background-color: #e5e7eb;
+    border-radius: 999px;
+    position: absolute !important;
+    overflow: hidden;
+}
+
+.simplebar-track.simplebar-horizontal::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #e5e7eb; 
+    border-radius: 999px;
+    top: 0;
+    left: 0;
+}
+
+/* SimpleBar scrollbar thumb styling */
+.simplebar-scrollbar::before {
+    background-color: #182547;
+    height: 100% !important;
+    width: 150% !important;
+    margin: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-radius: 999px;
+}
+

@@ -1,9 +1,10 @@
 import Footer from "../components/Footer"
-import Hero from "../components/Hero"
+import Hero from "../components/HomePageComponents/Hero"
 import Navbar from "../components/Navbar"
-import Section1 from "../components/Section1"
-import Section2 from "../components/Section2"
-import Section3 from "../components/Section3"
+import WhatWeDoSection from "../components/HomePageComponents/WhatWeDoSection"
+import NewsSection from "../components/HomePageComponents/NewsSection"
+import BlogSection from "../components/HomePageComponents/BlogSection"
+import Team from "../components/HomePageComponents/TeamSection"
 
 const HomePage = () => {
   return (
@@ -11,9 +12,10 @@ const HomePage = () => {
         <div>
             <Navbar />
             <Hero />
-            <Section1 />
-            <Section2 />
-            <Section3 />
+            <WhatWeDoSection />
+            <NewsSection />
+            <BlogSection />
+            <Team />
             <Footer />
         </div>
     </>
