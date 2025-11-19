@@ -14,11 +14,13 @@
 
   --neutral-100: #dde6ed;
   --neutral-200: #b3cfe5;
+  --main-gray: #b1b1b3;
 
   /* Light Theme */
   --light-bg: #F4F6F8;
   --light-surface: #FFFFFF;
   --light-text: #1C1F26;
+  /* --light-text: #182547; */
   --light-subtext: #5A5F6A;
   --light-border: #DDE3EA;
 
@@ -40,14 +42,14 @@
   color: var(--color-primary);
 }
 
-.light .header-light {
+.header-light {
   background: var(--light-surface);
   color: var(--color-primary);
 }
 
-.light .h2-light {color: var(--color-primary-light);}
+.h2-light {color: var(--color-primary);}
 
-.light .body-light {color: var(--light-text);}
+.body-light {color: var(--light-text);}
 
 .btn-light {
   background: var(--color-primary);
