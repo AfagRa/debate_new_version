@@ -74,7 +74,7 @@ function Navbar() {
           </Link>
           <button 
             onClick={scrollToContact}
-            className="btn-dark border-2 border-transparent cursor-pointer uppercase px-6 py-2 rounded transition-all"
+            className="btn-dark border-2 border-transparent cursor-pointer uppercase px-6 py-2 transition-all"
           >
             Join Us
           </button>

@@ -33,11 +33,11 @@ function NewsSection() {
   }
 
   return (
-    <div className="bg-[#182547]">
+    <div className="header-dark">
       <div className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
-          <div className="mb-12 text-[#b1b1b3]" data-aos="fade-up">
+          <div className="mb-12 body-dark" data-aos="fade-up">
             <h2 className="font-baskerville text-[3.5rem] leading-tight mb-4 italic">
               Latest News
             </h2>
@@ -55,12 +55,12 @@ function NewsSection() {
               <div 
                 key={news.id}
                 onClick={() => navigate(`/news/${news.id}`)}
-                className="group flex flex-col md:flex-row gap-6 bg-gray-50 overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer relative"
+                className="group flex flex-col md:flex-row gap-6 header-light overflow-hidden shadow-sm hover:shadow-lg transition-all cursor-pointer relative"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 {/* Hover Background Overlay */}
-                <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
+                <div style={{background: "var(--neutral-100)"}} className="absolute inset-0 opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none" />
 
                 {/* Image */}
                 <div className="w-full md:w-64 h-48 md:h-auto shrink-0 relative">
@@ -74,14 +74,14 @@ function NewsSection() {
                 {/* Content */}
                 <div className="flex flex-col justify-between py-6 px-6 grow relative">
                   <div>
-                    <h3 className="font-body text-[1.5rem] leading-snug font-semibold text-zinc-800 mb-3 group-hover:text-zinc-900 transition-colors">
+                    <h3 className="font-body text-[1.5rem] leading-snug font-semibold h2-light mb-3 group-hover:opacity-80 transition-colors">
                       {news.title}
                     </h3>
-                    <p className="font-body text-[1rem] leading-relaxed text-zinc-600 mb-4">
+                    <p className="font-body text-[1rem] leading-relaxed body-light mb-4">
                       {truncateText(news.content, 180)}
                     </p>
                   </div>
-                  <p className="font-body text-[0.875rem] text-zinc-500">
+                  <p className="font-body text-[0.875rem] opacity-70" style={{color: "var(--light-subtext)"}}>
                     {news.date}
                   </p>
                 </div>
@@ -92,7 +92,9 @@ function NewsSection() {
           {/* Read More Button */}
           <div className="flex justify-end" data-aos="fade-up" data-aos-delay={newsItems.length * 100}>
             <Link to="/news">
-              <button className="font-body bg-[#b1b1b3] text-[#182547] px-8 py-3 tracking-wider uppercase text-sm hover:bg-white cursor-pointer transition border border-zinc-600">
+              <button className="btn-dark font-body px-10 py-4 cursor-pointer transform
+                     transition-all font-semibold uppercase
+                     shadow-lg hover:shadow-xl">
                 Read More...
               </button>
             </Link>

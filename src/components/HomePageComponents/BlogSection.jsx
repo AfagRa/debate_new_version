@@ -54,13 +54,13 @@ function BlogSection() {
           <div className="max-w-6xl mx-auto relative">
             {/* Section Header */}
             <div className="mb-12" data-aos="fade-up">
-              <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic">
+              <h2 className="font-baskerville text-[3.5rem] leading-tight h2-light mb-4 italic">
                 Featured Blogs
               </h2>
-              <p className="font-garamond text-[1.75rem] leading-snug text-zinc-700 mb-4">
+              <p className="font-garamond text-[1.75rem] leading-snug body-light mb-4">
                 —insights, tips, and stories.
               </p>
-              <p className="font-body text-[1.125rem] leading-relaxed text-zinc-600 max-w-3xl">
+              <p className="font-body text-[1.125rem] leading-relaxed body-light max-w-3xl">
                 Explore articles written by our community members, covering debate strategies, personal experiences, and thought-provoking discussions.
               </p>
             </div>
@@ -71,7 +71,7 @@ function BlogSection() {
                 <div 
                   key={blog.id}
                   onClick={() => navigate(`/blog/${blog.id}`)}
-                  className="group/card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1"
+                  className="group/card header-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
@@ -86,13 +86,13 @@ function BlogSection() {
 
                   {/* Content */}
                   <div className="p-6">
-                    <h3 className="font-body text-[1.25rem] leading-snug font-semibold text-zinc-800 mb-3 group-hover/card:text-zinc-900 transition-colors">
+                    <h3 className="font-body text-[1.25rem] leading-snug font-semibold h2-light mb-3 group-hover/card:opacity-80 transition-colors">
                       {blog.title}
                     </h3>
-                    <p className="font-body text-[0.95rem] leading-relaxed text-zinc-600 mb-4">
+                    <p className="font-body text-[0.95rem] leading-relaxed body-light mb-4">
                       {truncateText(blog.content, 120)}
                     </p>
-                    <p className="font-body text-[0.875rem] text-zinc-500">
+                    <p className="font-body text-[0.875rem] body-light opacity-70">
                       {blog.date}
                     </p>
                   </div>
@@ -103,7 +103,8 @@ function BlogSection() {
             {/* Read More Button */}
             <div className="flex justify-end" data-aos="fade-up" data-aos-delay={blogPosts.length * 100}>
               <Link to="/blog">
-                <button className="font-body cursor-pointer bg-zinc-800 text-stone-100 px-8 py-3 tracking-wider uppercase text-sm hover:bg-zinc-700 transition border border-zinc-600">
+                <button className="btn-dark font-body px-10 py-4 cursor-pointer transform
+                     transition-all font-semibold uppercase shadow-lg hover:shadow-xl ">
                   Read More Blogs
                 </button>
               </Link>

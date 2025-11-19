@@ -117,10 +117,10 @@ function TeamSection() {
           <div className="max-w-6xl mx-auto relative">
             {/* Section Header */}
             <div className="text-center mb-12" data-aos="fade-up">
-              <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic">
+              <h2 className="font-baskerville text-[3.5rem] leading-tight h2-light mb-4 italic">
                 Our Team
               </h2>
-              <p className="font-body text-[1.25rem] leading-relaxed text-zinc-600 max-w-3xl mx-auto">
+              <p className="font-body text-[1.25rem] leading-relaxed body-light max-w-3xl mx-auto">
                 Meet the dedicated individuals who guide, inspire, and support our debate community.
               </p>
             </div>
@@ -131,7 +131,7 @@ function TeamSection() {
                 {teamMembers.map((member, index) => (
                   <div 
                     key={member.id}
-                    className="w-72 group/card cursor-pointer bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1"
+                    className="w-72 group/card cursor-pointer header-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:-translate-y-1"
                   >
                     {/* Image */}
                     <div className="w-full h-80 overflow-hidden">
@@ -144,10 +144,10 @@ function TeamSection() {
                     
                     {/* Name and Position */}
                     <div className="p-6 text-center">
-                      <h3 className="font-body text-[1.25rem] font-semibold text-zinc-800 mb-1">
+                      <h3 className="font-body text-[1.25rem] font-semibold h2-light mb-1">
                         {member.name}
                       </h3>
-                      <p className="font-body text-[1rem] text-zinc-600">
+                      <p className="font-body text-[1rem] body-light">
                         {member.position}
                       </p>
                     </div>
@@ -160,8 +160,9 @@ function TeamSection() {
             <div className="flex justify-center mt-12" data-aos="fade-up">
               <button 
                 onClick={scrollToContact}
-                className="font-body bg-zinc-800 text-stone-100 px-10 py-4 tracking-wider uppercase text-sm hover:bg-zinc-700 transition border border-zinc-600"
-              >
+                className="btn-dark font-body px-10 py-4 cursor-pointer transform
+                     transition-all font-semibold uppercase shadow-lg hover:shadow-xl"
+                  >
                 Join Us
               </button>
             </div>
