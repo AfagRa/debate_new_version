@@ -67,13 +67,8 @@
 /*           DARK MODE           */
 /* ============================= */
 
-.header-dark {
-  background: var(--color-primary);
-  color: var(--dark-text);
-}
-
 .dark .header-dark {
-  background: var(--neutral-100);
+  background: var(--color-primary);
   color: var(--dark-text);
 }
 

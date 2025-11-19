@@ -10,7 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b pb-10" style={{ borderColor: 'var(--dark-border)' }}>
 
           {/* 1. Contact Form */}
-          <div data-aos="fade-up">
+          <div id="contact" data-aos="fade-up">
             <h3 className="body-dark text-xl font-bold mb-4 border-b pb-2" style={{ borderColor: 'var(--dark-border)' }}>
               Contact Us
             </h3>
