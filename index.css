@@ -54,7 +54,12 @@
   color: #fff;
 }
 
-.btn-light:hover {background: var(--color-primary-light);}
+.btn-light:hover {
+    background: var(--color-primary-light);  
+    color: var(--color-dark-surface);
+    scale:1.05;  
+    transition: all 0.4s ease-in-out;
+}
 
 
 /* ============================= */
@@ -83,6 +88,7 @@
     background: var(--color-primary-lighter);
     color: var(--color-primary);
     scale:1.05;
+    transition: all 0.4s ease-in-out;
 }
 
 
