@@ -33,13 +33,13 @@ function WhatWeDoSection() {
           {/* Left Side - Text Content */}
           <div data-aos="fade-right">
             <div className="mb-12">
-              <h2 className="font-baskerville text-[3.5rem] leading-tight text-zinc-800 mb-4 italic" data-aos="fade-up">
+              <h2 className="font-baskerville text-[3.5rem] leading-tight text-[#182547] mb-4 italic" data-aos="fade-up">
                 What We Do
               </h2>
-              <p className="font-garamond text-[1.75rem] leading-snug text-zinc-700 mb-4" data-aos="fade-up" data-aos-delay="100">
+              <p className="font-garamond text-[1.75rem] leading-snug text-[#2e3649] mb-4" data-aos="fade-up" data-aos-delay="100">
                 —building voices, shaping minds.
               </p>
-              <p className="font-body text-[1.125rem] leading-relaxed text-zinc-600" data-aos="fade-up" data-aos-delay="200">
+              <p className="font-body text-[1.125rem] leading-relaxed text-[#2e3649]" data-aos="fade-up" data-aos-delay="200">
                 We provide a comprehensive platform for debaters to learn, compete, and grow together through meaningful engagement and intellectual challenge.
               </p>
             </div>
@@ -48,14 +48,14 @@ function WhatWeDoSection() {
             <div className="space-y-6 font-body">
               {activities.map((activity, index) => (
                 <div className="flex gap-4" key={activity.title} data-aos="fade-up" data-aos-delay={index * 100}>
-                  <div className="text-[2rem] leading-none shrink-0">
+                  <div className="text-[2rem] text-[#182547] leading-none shrink-0">
                     {activity.emoji}
                   </div>
                   <div>
-                    <h3 className="text-[1.25rem] leading-snug font-semibold text-zinc-800 mb-2">
+                    <h3 className="text-[1.25rem] leading-snug font-semibold text-[#182547] mb-2">
                       {activity.title}
                     </h3>
-                    <p className="text-[1rem] leading-relaxed text-zinc-600">
+                    <p className="text-[1rem] leading-relaxed text-[#2e3649]">
                       {activity.description}
                     </p>
                   </div>

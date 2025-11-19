@@ -11,7 +11,6 @@ const Hero = () => {
       className="relative min-h-screen bg-center bg-cover flex items-center justify-center overflow-hidden"
       style={{ backgroundImage: `url(/img/bg_hero.png)` }}
     >
-      {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black opacity-10" />
 
       {/* Hero Content */}
@@ -19,7 +18,6 @@ const Hero = () => {
         <h1 
           className="font-baskerville text-[4rem] md:text-[5rem] lg:text-[6rem] text-[#D2B896] mb-6 leading-tight"
           data-aos="fade-down"
-          // data-aos-duration="1000"
         >
           Join the Art of <span className="italic">Debate</span>
         </h1>
@@ -45,7 +43,7 @@ const Hero = () => {
         <button
           onClick={scrollToContact}
           className="font-body px-10 py-4 text-[#b1b1b3] bg-[#182547] 
-                     hover:bg-[#b1b1b3] hover:text-[#182547] 
+                     hover:bg-[#b1b1b3] hover:text-[#182547] cursor-pointer
                      transition-all duration-300 font-semibold uppercase tracking-wider
                      shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           data-aos="zoom-in"

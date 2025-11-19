@@ -2,17 +2,97 @@
 @import 'simplebar-react/dist/simplebar.min.css';
 @import 'aos/dist/aos.css';
 
-.font-garamond {
-  font-family: "EB Garamond", serif;
+/* ============================= */
+/*          COLOR SYSTEM         */
+/* ============================= */
+
+:root {
+  --color-primary: #182547;
+  --color-primary-light: #3C507D;
+  --color-primary-lighter: #B3CFE5;
+  --color-accent: #D93B22;
+
+  --neutral-100: #dde6ed;
+  --neutral-200: #b3cfe5;
+
+  /* Light Theme */
+  --light-bg: #F4F6F8;
+  --light-surface: #FFFFFF;
+  --light-text: #1C1F26;
+  --light-subtext: #5A5F6A;
+  --light-border: #DDE3EA;
+
+  /* Dark Theme */
+  --dark-bg: #0F1628;
+  --dark-surface: #182547;
+  --dark-text: #E5E9F1;
+  --dark-subtext: #AAB4C4;
+  --dark-border: #28344D;
 }
 
-.font-baskerville {
-  font-family: "Libre Baskerville", serif;
+
+/* ============================= */
+/*          LIGHT MODE           */
+/* ============================= */
+
+.header-light {
+  background: var(--light-surface);
+  color: var(--color-primary);
 }
 
-.font-body {
-  font-family: "Source Serif Pro", serif;
+.light .header-light {
+  background: var(--light-surface);
+  color: var(--color-primary);
 }
+
+.light .h2-light {color: var(--color-primary-light);}
+
+.light .body-light {color: var(--light-text);}
+
+.btn-light {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn-light:hover {background: var(--color-primary-light);}
+
+
+/* ============================= */
+/*           DARK MODE           */
+/* ============================= */
+
+.header-dark {
+  background: var(--color-primary);
+  color: var(--dark-text);
+}
+
+.dark .header-dark {
+  background: var(--neutral-100);
+  color: var(--dark-text);
+}
+
+.dark .h2-dark { color: var(--neutral-200);}
+
+.body-dark {color: var(--dark-text);}
+.btn-dark {
+  background: var(--color-primary-light);
+  color: #fff;
+}
+
+.btn-dark:hover {
+    background: var(--color-primary-lighter);
+    color: var(--color-primary);
+    scale:1.05;
+}
+
+
+.font-garamond { font-family: "EB Garamond", serif; }
+
+.font-baskerville { font-family: "Libre Baskerville", serif; }
+
+.font-body { font-family: "Source Serif Pro", serif; }
+
+
 
 .overflow-x-scroll::-webkit-scrollbar {
     display: none;
