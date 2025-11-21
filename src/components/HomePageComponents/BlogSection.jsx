@@ -1,8 +1,8 @@
-import { Link, useNavigate } from 'react-router'
+import { Link } from 'react-router'
+import AllBlogs from '../BlogPageComponents/AllBlogs'
 
 function BlogSection() {
-  const navigate = useNavigate()
-
+  // // Sample blog data - will come from backend later
   const blogPosts = [
     {
       id: 1,
@@ -26,11 +26,6 @@ function BlogSection() {
       date: "November 2, 2024"
     }
   ]
-
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) return text
-    return text.slice(0, maxLength) + '...'
-  }
 
   return (
     <div className="bg-white relative overflow-hidden">
@@ -65,46 +60,12 @@ function BlogSection() {
               </p>
             </div>
 
-            {/* Blog Cards Grid */}
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
-              {blogPosts.map((blog, index) => (
-                <div 
-                  key={blog.id}
-                  onClick={() => navigate(`/blog/${blog.id}`)}
-                  className="group/card header-light rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all cursor-pointer transform hover:-translate-y-1"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                >
-                  {/* Image */}
-                  <div className="w-full h-48 overflow-hidden">
-                    <img 
-                      src={blog.image} 
-                      alt={blog.title}
-                      className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="p-6">
-                    <h3 className="font-body text-[1.25rem] leading-snug font-semibold h2-light mb-3 group-hover/card:opacity-80 transition-colors">
-                      {blog.title}
-                    </h3>
-                    <p className="font-body text-[0.95rem] leading-relaxed body-light mb-4">
-                      {truncateText(blog.content, 120)}
-                    </p>
-                    <p className="font-body text-[0.875rem] body-light opacity-70">
-                      {blog.date}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <AllBlogs blogs={blogPosts} />
 
             {/* Read More Button */}
             <div className="flex justify-end" data-aos="fade-up" data-aos-delay={blogPosts.length * 100}>
               <Link to="/blog">
-                <button className="btn-dark font-body px-10 py-4 cursor-pointer transform
-                     transition-all font-semibold uppercase shadow-lg hover:shadow-xl ">
+                <button className="btn-light font-body cursor-pointer px-8 py-3 tracking-wider uppercase text-sm transition border border-zinc-600">
                   Read More Blogs
                 </button>
               </Link>
