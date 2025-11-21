@@ -135,7 +135,7 @@ function BlogPage() {
         <div className="max-w-7xl mx-auto">
           {/* Page Header */}
           <div className="text-center mb-12" data-aos="fade-up">
-            <h1 className="font-baskerville text-[4rem] md:text-[5rem] h2-light mb-4 italic">
+            <h1 className="font-baskerville max-md:mt-4 text-[3rem] md:text-[5rem] h2-light mb-4 italic">
               All Blogs
             </h1>
             <p className="font-body text-[1.25rem] body-light max-w-2xl mx-auto">
