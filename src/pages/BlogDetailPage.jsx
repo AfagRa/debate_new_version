@@ -35,7 +35,7 @@ Remember, the goal isn't just to win arguments—it's to engage in meaningful di
   }
 
   return (
-    <div className="bg-(var(--neutral-100)) pt-16 min-h-screen">
+    <div className="bg-[var(--neutral-100)] pt-16 min-h-screen">
       <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Title */}
         <h1
