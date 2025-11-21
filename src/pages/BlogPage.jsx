@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react'
 import AllBlogs from '../components/BlogPageComponents/AllBlogs'
-import Pagination from '../components/BlogPageComponents/Pagination'
-import SearchBar from '../components/BlogPageComponents/SearchBar'
+import SearchBar from '../components/SearchBar'
+import Pagination from '../components/Pagination'
 
 function BlogPage() {
   const [searchQuery, setSearchQuery] = useState('')
