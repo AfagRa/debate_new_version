@@ -1,9 +1,7 @@
-import { Link, useNavigate } from 'react-router'
+import { Link } from 'react-router'
 import AllNews from '../NewsPageComponents/AllNews'
 
 function NewsSection() {
-  const navigate = useNavigate()
-
   const newsItems = [
     {
       id: 1,
@@ -27,11 +25,6 @@ function NewsSection() {
       date: "November 5, 2024"
     }
   ]
-
-  const truncateText = (text, maxLength) => {
-    if (text.length <= maxLength) return text
-    return text.slice(0, maxLength) + '...'
-  }
 
   return (
     <div className="header-dark">
