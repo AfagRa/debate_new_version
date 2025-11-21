@@ -19,9 +19,56 @@ function Navbar() {
 
   return (
     <header className="header-dark px-6 fixed w-full top-0 z-50">
-      <nav className="max-w-7xl py-1 mx-auto flex justify-between items-center h-20">
-        {/* Mobile: Hamburger Menu */}
-        <div className="md:hidden">
+      <nav className="max-w-7xl py-1 mx-auto flex items-center h-20 relative px-6">
+
+        {/* LEFT GROUP: pages + logo */}
+        <div className="flex items-center gap-20">
+
+          {/* Pages */}
+          <div className="hidden md:flex gap-12 items-center font-body text-md tracking-widest uppercase">
+            <Link
+              to="/" 
+              className="body-dark hover:opacity-70 transition-colors border-b-2 border-transparent hover:border-current pb-1"
+            >
+              Home
+            </Link>
+            <Link 
+              to="/blog" 
+              className="body-dark hover:opacity-70 transition-colors border-b-2 border-transparent hover:border-current pb-1"
+            >
+              Blog
+            </Link>
+            <Link 
+              to="/news" 
+              className="body-dark hover:opacity-70 transition-colors border-b-2 border-transparent hover:border-current pb-1"
+            >
+              News
+            </Link>
+          </div>
+
+          {/* Logo — absolutely centered in the navbar */}
+          <div className="absolute left-1/2 -translate-x-1/2">
+            <Link to="/" onClick={closeMenu}>
+              <div className="w-16 h-16 rounded-full border-2 border-gray-400 flex items-center justify-center hover:border-white transition-colors">
+                <img src="../../img/logo.png" alt="logo" className="w-full h-full object-contain" />
+              </div>
+            </Link>
+          </div>
+
+        </div>
+
+        {/* RIGHT BUTTON */}
+        <div className="hidden md:flex ml-auto font-body text-md tracking-widest uppercase">
+          <button 
+            onClick={scrollToContact}
+            className="btn-dark border-2 border-transparent cursor-pointer uppercase px-6 py-2 transition-all"
+          >
+            Join Us
+          </button>
+        </div>
+
+        {/* Mobile hamburger exactly unchanged */}
+        <div className="md:hidden absolute left-6">
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="body-dark transition-colors hover:opacity-70"
@@ -31,63 +78,13 @@ function Navbar() {
           </button>
         </div>
 
-        {/* Desktop: Left Navigation */}
-        <div className="hidden md:flex gap-12 items-center font-body text-md tracking-widest uppercase">
-          <Link
-            to="/" 
-            className="body-dark hover:opacity-70 transition-colors border-b-2 border-transparent hover:border-current pb-1"
-          >
-            Home
-          </Link>
-          <Link 
-            to="/about" 
-            className="body-dark hover:opacity-70 transition-colors border-b-2 border-transparent hover:border-current pb-1"
-          >
-            About
-          </Link>
-        </div>
-
-        {/* Center Logo */}
-        <div className="shrink-0">
-          <Link to="/" onClick={closeMenu}>
-            <div className="w-16 h-16 rounded-full border-2 border-gray-400 flex items-center justify-center hover:border-white transition-colors">
-              <div className="text-center">
-                <img src="../../img/logo.png" alt="logo" className="w-full h-full object-contain" />
-              </div>
-            </div>
-          </Link>
-        </div>
-
-        {/* Desktop: Right Navigation */}
-        <div className="hidden md:flex gap-12 items-center font-body text-md tracking-widest uppercase">
-          <Link 
-            to="/blog" 
-            className="body-dark hover:opacity-70 transition-colors border-b-2 border-transparent hover:border-current pb-1"
-          >
-            Blog
-          </Link>
-          <Link 
-            to="/news" 
-            className="body-dark hover:opacity-70 transition-colors border-b-2 border-transparent hover:border-current pb-1"
-          >
-            News
-          </Link>
-          <button 
-            onClick={scrollToContact}
-            className="btn-dark border-2 border-transparent cursor-pointer uppercase px-6 py-2 transition-all"
-          >
-            Join Us
-          </button>
-        </div>
-
-        {/* Mobile: Empty space for layout balance */}
         <div className="md:hidden w-7"></div>
       </nav>
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
         <div 
-          className="md:hidden fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="md:hidden fixed inset-0 bg-[#030b1fc2] z-40"
           onClick={closeMenu}
         />
       )}
@@ -118,13 +115,6 @@ function Navbar() {
               className="body-dark text-xl uppercase tracking-wide hover:opacity-70 transition-colors pb-3 border-b border-gray-700"
             >
               Home
-            </Link>
-            <Link
-              to="/about"
-              onClick={closeMenu}
-              className="body-dark text-xl uppercase tracking-wide hover:opacity-70 transition-colors pb-3 border-b border-gray-700"
-            >
-              About
             </Link>
             <Link
               to="/blog"
