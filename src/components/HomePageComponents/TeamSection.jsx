@@ -16,7 +16,7 @@ function TeamSection() {
     },
     {
       id: 3,
-      name: "Aykhan Guluzada",
+      name: "Aykhan Guluzade",
       position: "Graphic Designer",
       image: "../../img/team/aykhan_guluzada.jpg"
     },
@@ -28,7 +28,7 @@ function TeamSection() {
     },
     {
       id: 5,
-      name: "Shukufa Salimzada",
+      name: "Shukufa Salimzade",
       position: "Content Writer",
       image: "../../img/team/shukufa_salimzada.jpg"
     },
@@ -64,13 +64,13 @@ function TeamSection() {
     },
     {
       id: 11,
-      name: "Dinara Rustamzada",
+      name: "Dinara Rustamzade",
       position: "Coordinator",
       image: "../../img/team/dinara_rustamzada.jpg"
     },
     {
       id: 12,
-      name: "Ismayil Amrahzada",
+      name: "Ismayil Amrahzade",
       position: "Coordinator",
       image: "../../img/team/ismayil_amrahzada.jpg"
     },
