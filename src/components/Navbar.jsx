@@ -19,7 +19,7 @@ function Navbar() {
 
   return (
     <header className="header-dark px-6 fixed w-full top-0 z-50">
-      <nav className="max-w-7xl py-1 mx-auto flex items-center h-20 relative px-6">
+      <nav className="max-w-7xl py-1 mx-auto flex items-center h-20 relative px-2 md:px-6">
 
         {/* LEFT GROUP: pages + logo */}
         <div className="flex items-center gap-20">
@@ -68,7 +68,7 @@ function Navbar() {
         </div>
 
         {/* Mobile hamburger exactly unchanged */}
-        <div className="md:hidden absolute left-6">
+        <div className="md:hidden absolute left-0">
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="body-dark transition-colors hover:opacity-70"
